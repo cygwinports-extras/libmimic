@@ -1,0 +1,25 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libmimic-1.0.4/doc/Doxyfile.in src/libmimic-1.0.4/doc/Doxyfile.in
+--- origsrc/libmimic-1.0.4/doc/Doxyfile.in	2006-02-07 03:53:40.000000000 -0600
++++ src/libmimic-1.0.4/doc/Doxyfile.in	2007-06-24 10:07:58.125000000 -0500
+@@ -70,7 +70,7 @@
+ #---------------------------------------------------------------------------
+ # configuration options related to the input files
+ #---------------------------------------------------------------------------
+-INPUT                  = ../src
++INPUT                  = @top_srcdir@/src
+ FILE_PATTERNS          = *.c *.h
+ RECURSIVE              = YES
+ EXCLUDE                = 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/libmimic-1.0.4/src/Makefile.am src/libmimic-1.0.4/src/Makefile.am
+--- origsrc/libmimic-1.0.4/src/Makefile.am	2006-02-07 03:53:40.000000000 -0600
++++ src/libmimic-1.0.4/src/Makefile.am	2007-06-24 10:03:42.125000000 -0500
+@@ -17,7 +17,9 @@
+ 	colorspace.c \
+ 	deblock.c \
+ 	mimic-private.h
++libmimic_la_LIBADD = $(GLIB_LIBS)
+ libmimic_la_LDFLAGS = \
+ 	-version-info $(MIMIC_CURRENT):$(MIMIC_REVISION):$(MIMIC_AGE) \
++	-no-undefined \
+ 	-export-symbols-regex "^[^_].*"
+ 
