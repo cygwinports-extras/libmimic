@@ -1,5 +1,5 @@
 category: Net Video
-requires: cygwin glib2
+requires: glib2
 external-source: libmimic
 sdesc: "MSN Messenger video codec (runtime)"
 ldesc: "libmimic is an open source video encoding/decoding library for 
