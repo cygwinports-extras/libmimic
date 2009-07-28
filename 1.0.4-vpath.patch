@@ -9,15 +9,3 @@
  FILE_PATTERNS          = *.c *.h
  RECURSIVE              = YES
  EXCLUDE                = 
---- origsrc/libmimic-1.0.4/src/Makefile.am	2006-02-07 03:53:40.000000000 -0600
-+++ src/libmimic-1.0.4/src/Makefile.am	2007-06-24 10:03:42.125000000 -0500
-@@ -17,7 +17,9 @@
- 	colorspace.c \
- 	deblock.c \
- 	mimic-private.h
-+libmimic_la_LIBADD = $(GLIB_LIBS)
- libmimic_la_LDFLAGS = \
- 	-version-info $(MIMIC_CURRENT):$(MIMIC_REVISION):$(MIMIC_AGE) \
-+	-no-undefined \
- 	-export-symbols-regex "^[^_].*"
- 

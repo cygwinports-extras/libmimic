@@ -1,8 +1,0 @@
-DESCRIPTION="MSN Messenger video codec"
-HOMEPAGE="http://sourceforge.net/projects/farsight/"
-SRC_URI="mirror://sourceforge/farsight/${P}.tar.gz"
-
-PKG_NAMES="${PN} ${PN}0"
-PKG_HINTS="setup runtime"
-PKG_CONTENTS[0]='usr/include/ usr/lib/ usr/share/'
-PKG_CONTENTS[1]='usr/bin/*.dll'
