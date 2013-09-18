@@ -1,0 +1,16 @@
+NAME="libmimic"
+VERSION=1.0.4
+RELEASE=2
+CATEGORY="Libs"
+SUMMARY="MSN Messenger video codec"
+DESCRIPTION="libmimic is an open source video encoding/decoding library for
+Mimic V2.x-ncoded content (fourCC: ML20), which is the encoding used by MSN
+Messenger for webcam conversations."
+HOMEPAGE="http://sourceforge.net/projects/farsight/"
+SRC_URI="mirror://sourceforge/farsight/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="1.0.4-no-undefined.patch
+           1.0.4-vpath.patch"
+
+PKG_NAMES="${NAME}0 ${NAME}-devel"
+libmimic0_CONTENTS="usr/bin/cygmimic-0.dll usr/share/doc/"
+libmimic_devel_CONTENTS="usr/include/ usr/lib/"

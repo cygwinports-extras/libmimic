@@ -1,7 +1,0 @@
-category: Net Video
-requires: libmimic0 libglib2.0-devel
-external-source: libmimic
-sdesc: "MSN Messenger video codec (development)"
-ldesc: "libmimic is an open source video encoding/decoding library for 
-Mimic V2.x-ncoded content (fourCC: ML20), which is the encoding used by 
-MSN Messenger for webcam conversations."
